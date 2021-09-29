@@ -1,27 +1,42 @@
 .new-book__controls {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    text-align: left;
-  }
-  
-  .new-book__control label {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    display: block;
-  }
-  
-  .new-book__control input,
-  .new-book__control select {
-    font: inherit;
-    padding: 0.5rem;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    width: 20rem;
-    max-width: 100%;
-  }
-  
-  .new-book__actions {
-    text-align: right;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.new-book__control label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.new-book__control input,
+.new-book__control select {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 20rem;
+  max-width: 100%;
+}
+
+.new-book__actions {
+  text-align: right;
+  font: inherit;
+  cursor: pointer;
+  padding: 0 2rem;
+  border: 1px solid #0290ff;
+  background-color: #0290ff;
+  color: white;
+  margin-right: 1rem;
+}
+
+button {
+  border: none;
+  background: none;
+  color: #fff;
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+}

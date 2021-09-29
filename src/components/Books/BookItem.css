@@ -16,27 +16,26 @@ ul {
   padding: 20px 20px;
   line-height: 3rem;
   margin-bottom: 1rem;
-  }
-  
-  .book-item__category {
-    color: #121212;
-  }
-  
-  .book-item__title {
-    color: #121212;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .book-item__author {
-    font-family: RobotoSlab;
-    font-size: 1.3rem;
-    font-weight: 300;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #4386bf;
-  }
-  
+}
+
+.book-item__category {
+  color: #121212;
+}
+
+.book-item__title {
+  color: #121212;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.book-item__author {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
