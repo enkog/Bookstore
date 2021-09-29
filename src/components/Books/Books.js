@@ -1,9 +1,16 @@
 import React from 'react';
+import BookForm from '../NewBooks/BookForm';
 
 const Books = () => {
   return (
     <div>
-      <h1>Books page</h1>
+      <ul>
+          <li>Category</li>
+          <li>Title</li>
+          <li>Author</li>
+      </ul>
+      <button type="button">Remove</button>
+      <BookForm />
     </div>
   );
 }
