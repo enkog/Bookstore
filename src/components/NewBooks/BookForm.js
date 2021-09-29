@@ -8,6 +8,9 @@ const BookForm = () => (
         <input type="text" placeholder="Book Title" />
       </div>
       <div className="new-book__control">
+        <input type="text" placeholder="Book Author" />
+      </div>
+      <div className="new-book__control">
         <select>
           <option value="">Category</option>
           <option value="action">Action</option>
