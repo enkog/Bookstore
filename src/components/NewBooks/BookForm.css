@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-bottom: 0 1rem;
+  margin-bottom: 1rem;
   text-align: left;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .form-header {
-  color: #888888;
+  color: #888;
 }
 
 form {
