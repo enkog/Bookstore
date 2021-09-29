@@ -3,6 +3,7 @@ import './BookForm.css';
 
 const BookForm = () => (
   <form>
+    <h2 className="form-header">ADD NEW BOOK</h2>
     <div className="new-book__controls">
       <div className="new-book__control">
         <input type="text" placeholder="Book Title" />

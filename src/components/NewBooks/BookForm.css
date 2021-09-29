@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0 1rem;
   text-align: left;
 }
 
@@ -18,7 +18,7 @@
   padding: 0.5rem;
   border-radius: 6px;
   border: 1px solid #ccc;
-  width: 20rem;
+  width: 19rem;
   max-width: 100%;
 }
 
@@ -26,7 +26,7 @@
   text-align: right;
   font: inherit;
   cursor: pointer;
-  padding: 0 2rem;
+  padding: 0 3rem;
   border: 1px solid #0290ff;
   background-color: #0290ff;
   color: white;
@@ -39,4 +39,13 @@ button {
   color: #fff;
   padding: 0.5rem;
   margin-top: 0.2rem;
+}
+
+.form-header {
+  color: #888888;
+}
+
+form {
+  width: 100%;
+  margin: 2rem 0;
 }

@@ -6,18 +6,26 @@ import Categories from './components/Categories';
 import NavBar from './components/Layout/NavBar';
 
 function App() {
-  // const data = [
-  //   {
-  //     id: 1, category: 'Action', title: 'The Hunger games', author: 'Suzanne Collins',
-  //   },
-  //   {
-  //     id: 2, category: 'Science Fiction', title: 'Dune', author: 'Frank Herbert',
-  //   },
-  //   {
-  //     id: 3, category: 'Economy',
-  // title: 'Capital in the Twenty-First Century', author: 'Suzanne Collins',
-  //   },
-  // ];
+  const data = [
+    {
+      id: 1,
+      category: 'Action',
+      title: 'The Hunger games',
+      author: 'Suzanne Collins',
+    },
+    {
+      id: 2,
+      category: 'Science Fiction',
+      title: 'Dune',
+      author: 'Frank Herbert',
+    },
+    {
+      id: 3,
+      category: 'Economy',
+      title: 'Capital in the Twenty-First Century',
+      author: 'Suzanne Collins',
+    },
+  ];
 
   return (
     <div>
@@ -25,7 +33,7 @@ function App() {
       <main>
         <Switch>
           <Route exact path="/">
-            <Books />
+            <Books items={data} />
           </Route>
           <Route path="/categories">
             <Categories />
