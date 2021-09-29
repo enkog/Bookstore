@@ -20,7 +20,7 @@ const BookForm = () => (
         </select>
       </div>
       <div className="new-book__actions">
-        <button type="submit">Add book</button>
+        <button type="submit" className="add-btn">Add book</button>
       </div>
     </div>
   </form>

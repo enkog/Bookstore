@@ -7,9 +7,12 @@ const BookItem = (props) => {
 
   return (
     <div className={classes.items}>
-      <li className={classes.category}>{category}</li>
-      <li className={classes.title}>{title}</li>
-      <li className={classes.author}>{author}</li>
+      <div>
+        <li className={classes.category}>{category}</li>
+        <li className={classes.title}>{title}</li>
+        <li className={classes.author}>{author}</li>
+      </div>
+      <button type="button" className={classes.remove}>Remove</button>
     </div>
   );
 };
