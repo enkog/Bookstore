@@ -32,10 +32,12 @@ const BookItem = (props) => {
     </div>
   );
 };
+
 BookItem.propTypes = {
   id: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
 };
+
 export default BookItem;

@@ -1,6 +1,5 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
 import BookForm from '../NewBooks/BookForm';
 import BookItem from './BookItem';
 
@@ -12,8 +11,8 @@ const Books = () => {
       <ul>
         {books.map((data) => (
           <BookItem
-            key={uuidv4()}
-            id={uuidv4()}
+            key={data.id}
+            id={data.id}
             category={data.category}
             title={data.title}
             author={data.author}
