@@ -13,6 +13,7 @@ const Books = () => {
         {books.map((data) => (
           <BookItem
             key={uuidv4()}
+            id={uuidv4()}
             category={data.category}
             title={data.title}
             author={data.author}
