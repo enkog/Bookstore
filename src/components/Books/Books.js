@@ -1,16 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 import BookForm from '../NewBooks/BookForm';
 import BookItem from './BookItem';
 
-const Books = (props) => {
-  const { items } = props;
+const Books = () => {
+  const books = useSelector((state) => state.booksReducer);
+
   return (
     <div>
       <ul>
-        {items.map((data) => (
+        {books.map((data) => (
           <BookItem
             key={data.id}
+            id={data.id}
             category={data.category}
             title={data.title}
             author={data.author}
@@ -21,9 +23,5 @@ const Books = (props) => {
     </div>
   );
 };
-Books.propTypes = {
 
-  items: PropTypes.string.isRequired,
-
-};
 export default Books;
