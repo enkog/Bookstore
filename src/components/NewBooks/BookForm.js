@@ -1,34 +1,27 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { addBook } from '../../redux/books/books';
 import './BookForm.css';
 
-const BookForm = (props) => {
+const BookForm = () => {
+  const dispatch = useDispatch();
+
   const [enteredTitle, setTitle] = useState('');
   const [enteredAuthor, setAuthor] = useState('');
   const [enteredCategory, setCategory] = useState('');
-
-  const titleChangeHandler = (event) => {
-    setTitle(event.target.value);
-  };
-
-  const authorChangeHandler = (event) => {
-    setAuthor(event.target.value);
-  };
-
-  const categoryChangeHandler = (event) => {
-    setCategory(event.target.value);
-  };
 
   const submitHandler = (event) => {
     event.preventDefault();
 
     const bookData = {
+      id: uuidv4(),
       title: enteredTitle,
       author: enteredAuthor,
       category: enteredCategory,
     };
 
-    props.onSaveBookData(bookData);
+    dispatch(addBook(bookData));
 
     setTitle('');
     setAuthor('');
@@ -40,15 +33,15 @@ const BookForm = (props) => {
       <h2 className="form-header">ADD NEW BOOK</h2>
       <div className="new-book__controls">
         <div className="new-book__control">
-          <input type="text" placeholder="Book Title" value={enteredTitle} onChange={titleChangeHandler} />
+          <input type="text" placeholder="Book Title" value={enteredTitle} onChange={(event) => setTitle(event.target.value)} />
         </div>
 
         <div className="new-book__control">
-          <input type="text" placeholder="Book Author" value={enteredAuthor} onChange={authorChangeHandler} />
+          <input type="text" placeholder="Book Author" value={enteredAuthor} onChange={(event) => setAuthor(event.target.value)} />
         </div>
 
         <div className="new-book__control">
-          <input type="text" placeholder="Book Category" value={enteredCategory} onChange={categoryChangeHandler} />
+          <input type="text" placeholder="Book Category" value={enteredCategory} onChange={(event) => setCategory(event.target.value)} />
         </div>
 
         <div className="new-book__actions">
@@ -57,10 +50,6 @@ const BookForm = (props) => {
       </div>
     </form>
   );
-};
-
-BookForm.propTypes = {
-  onSaveBookData: PropTypes.instanceOf(Object).isRequired,
 };
 
 export default BookForm;

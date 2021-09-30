@@ -1,23 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import BookForm from '../NewBooks/BookForm';
 import BookItem from './BookItem';
 
-const Books = (props) => {
-  const { items } = props;
-
-  const saveBookDataHandler = (enteteredBookData) => {
-    const bookData = {
-      ...enteteredBookData,
-    };
-    props.onAddBook(bookData);
-  };
+const Books = () => {
+  const books = useSelector((state) => state.booksReducer);
 
   return (
     <div>
       <ul>
-        {items.map((data) => (
+        {books.map((data) => (
           <BookItem
             key={uuidv4()}
             category={data.category}
@@ -26,14 +19,9 @@ const Books = (props) => {
           />
         ))}
       </ul>
-      <BookForm onSaveBookData={saveBookDataHandler} />
+      <BookForm />
     </div>
   );
 };
 
-Books.propTypes = {
-  items: PropTypes.instanceOf(Array).isRequired,
-  onAddBook: PropTypes.instanceOf(Object).isRequired,
-
-};
 export default Books;
