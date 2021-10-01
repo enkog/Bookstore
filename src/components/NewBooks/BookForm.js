@@ -1,30 +1,27 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../../redux/books/books';
+import { addNewBook } from '../../redux/books/books';
 import './BookForm.css';
 
 const BookForm = () => {
   const dispatch = useDispatch();
 
   const [enteredTitle, setTitle] = useState('');
-  const [enteredAuthor, setAuthor] = useState('');
   const [enteredCategory, setCategory] = useState('');
 
   const submitHandler = (event) => {
     event.preventDefault();
 
     const bookData = {
-      id: uuidv4(),
+      item_id: uuidv4(),
       title: enteredTitle,
-      author: enteredAuthor,
       category: enteredCategory,
     };
 
-    dispatch(addBook(bookData));
+    dispatch(addNewBook(bookData));
 
     setTitle('');
-    setAuthor('');
     setCategory('');
   };
 
@@ -34,10 +31,6 @@ const BookForm = () => {
       <div className="new-book__controls">
         <div className="new-book__control">
           <input type="text" placeholder="Book Title" value={enteredTitle} onChange={(event) => setTitle(event.target.value)} />
-        </div>
-
-        <div className="new-book__control">
-          <input type="text" placeholder="Book Author" value={enteredAuthor} onChange={(event) => setAuthor(event.target.value)} />
         </div>
 
         <div className="new-book__control">
