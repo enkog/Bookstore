@@ -1,18 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../../redux/books/books';
+import { removeBookItem } from '../../redux/books/books';
 import classes from './BookItem.module.css';
 
 const BookItem = (props) => {
   const {
-    id, category, title, author,
+    // eslint-disable-next-line camelcase
+    item_id, category, title,
   } = props;
 
   const dispatch = useDispatch();
 
   const deleteBook = () => {
-    dispatch(removeBook(id));
+    dispatch(removeBookItem(item_id));
   };
 
   return (
@@ -20,7 +21,6 @@ const BookItem = (props) => {
       <div>
         <li className={classes.category}>{category}</li>
         <li className={classes.title}>{title}</li>
-        <li className={classes.author}>{author}</li>
       </div>
       <button
         type="button"
@@ -34,10 +34,9 @@ const BookItem = (props) => {
 };
 
 BookItem.propTypes = {
-  id: PropTypes.string.isRequired,
+  item_id: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
 };
 
 export default BookItem;

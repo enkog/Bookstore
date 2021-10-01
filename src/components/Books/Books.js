@@ -1,21 +1,27 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import BookForm from '../NewBooks/BookForm';
 import BookItem from './BookItem';
+// eslint-disable-next-line import/named
+import { loadBooks } from '../../redux/books/books';
 
 const Books = () => {
-  const books = useSelector((state) => state.booksReducer);
+  const dispatch = useDispatch();
+  const books = useSelector((state) => state.data);
+
+  useEffect(() => {
+    dispatch(loadBooks());
+  }, []);
 
   return (
     <div>
       <ul>
-        {books.map((data) => (
+        {books && books.map((book) => (
           <BookItem
-            key={data.id}
-            id={data.id}
-            category={data.category}
-            title={data.title}
-            author={data.author}
+            key={book.item_id}
+            item_id={book.item_id}
+            category={book.category}
+            title={book.title}
           />
         ))}
       </ul>
