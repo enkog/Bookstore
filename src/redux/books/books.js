@@ -36,7 +36,21 @@ export const removeBook = (item_id) => ({
   payload: item_id,
 });
 
+export const addNewBook = (book) => async (dispatch) => {
+  const { data } = await axios.post(`${baseUrl}/apps/${appId}/books`, book);
 
+  if (data) {
+    dispatch(addBook(book));
+  }
+};
+
+export const removeBookItem = (item_id) => async (dispatch) => {
+  const { data } = await axios.delete(`${baseUrl}/apps/${appId}/books/${item_id}`);
+
+  if (data) {
+    dispatch(removeBook(item_id));
+  }
+};
 
 const reducer = (state = initialState, action) => {
   const { type, payload } = action;
