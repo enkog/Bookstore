@@ -14,38 +14,45 @@
 
 .new-book__control input,
 .new-book__control select {
-  font: inherit;
-  padding: 0.5rem;
-  border-radius: 6px;
+  width: 29.3rem;
+  height: 2.813rem;
+  font-size: 1rem;
+  /* margin: 1.188rem 2.125rem 0 0; */
+  /* padding: 1.5rem; */
   border: 1px solid #ccc;
-  width: 19rem;
-  max-width: 100%;
-}
-
-.new-book__actions {
-  text-align: right;
-  font: inherit;
-  cursor: pointer;
-  padding: 0 3rem;
-  border: 1px solid #0290ff;
-  background-color: #0290ff;
-  color: white;
-  margin-right: 1rem;
+  border-radius: 4px;
 }
 
 .add-btn {
+  width: 11.5rem;
+  height: 2.813rem;
+
+  /* padding: 1.5rem; */
+  border-radius: 3px;
+  background:#0290ff;
+
+
+  font-size: 0.813rem;
+  font-weight: bold;
   border: none;
-  background: none;
+  letter-spacing: 0.5px;
+  text-align: center;
   color: #fff;
-  padding: 0.5rem;
-  margin-top: 0.2rem;
 }
 
 .form-header {
+  width: 10.875rem;
+  height: 1.5rem;
+  /* margin: 2rem 6.25rem 0; */
+  font-size: 1.25rem;
+  letter-spacing: -0.18px;
   color: #888;
+  margin-bottom: 2rem;
 }
 
 form {
   width: 100%;
-  margin: 2rem 0;
+  /* margin: 1rem 6.25rem 0; */
+  display: flex;
+  margin-bottom: 3rem;
 }

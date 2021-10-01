@@ -17,18 +17,18 @@ const BookItem = (props) => {
   };
 
   return (
-    <div className={classes.items}>
-      <div>
-        <li className={classes.category}>{category}</li>
-        <li className={classes.title}>{title}</li>
+    <div>
+      <div className={classes.items}>
+        <div className={classes.desc}>
+          <li className={classes.category}>{category}</li>
+          <li className={classes.title}>{title}</li>
+        </div>
+        <div className={classes.rmvDiv}>
+          <button type="button">Comments</button>
+          <button type="button" className={classes.remove} onClick={deleteBook}>Remove</button>
+          <button type="button">Edit</button>
+        </div>
       </div>
-      <button
-        type="button"
-        className={classes.remove}
-        onClick={deleteBook}
-      >
-        Remove
-      </button>
     </div>
   );
 };

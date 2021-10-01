@@ -1,42 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 .items {
-  width: 100%;
-  height: 13rem;
+  height: 10.625rem;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #fff;
-  padding: 20px 20px;
-  line-height: 3rem;
+  padding: 15px 20px;
+  line-height: 2rem;
   margin-bottom: 1rem;
 }
 
+.desc {
+  width: 350px;
+}
 .category {
   color: #121212;
+  opacity: 0.5;
 }
 
 .title {
   color: #121212;
   font-family: 'Roboto', sans-serif;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.author {
-  font-family: 'Roboto', sans-serif;
   font-size: 1.3rem;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #4386bf;
+  font-weight: bold;
+
 }
 
-.items .remove {
-  background: #0290ff;
+.rmvDiv {
+  margin-top: 2rem;
+}
+.rmvDiv button {
   border: none;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  margin-top: 0.2rem;
+  background: none;
+  color: #0290ff;
+  font-size: 0.96rem;
+  cursor: pointer;
+}
+
+.rmvDiv .remove {
+  border-left: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+  padding: 0 9px;
 }

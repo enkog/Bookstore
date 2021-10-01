@@ -26,22 +26,26 @@ const BookForm = () => {
   };
 
   return (
-    <form onSubmit={submitHandler}>
+    <div>
       <h2 className="form-header">ADD NEW BOOK</h2>
-      <div className="new-book__controls">
-        <div className="new-book__control">
-          <input type="text" placeholder="Book Title" value={enteredTitle} onChange={(event) => setTitle(event.target.value)} />
-        </div>
+      <form onSubmit={submitHandler}>
 
-        <div className="new-book__control">
-          <input type="text" placeholder="Book Category" value={enteredCategory} onChange={(event) => setCategory(event.target.value)} />
-        </div>
+        <div className="new-book__controls">
+          <div className="new-book__control">
+            <input type="text" placeholder="Book Title" value={enteredTitle} onChange={(event) => setTitle(event.target.value)} />
+          </div>
 
-        <div className="new-book__actions">
-          <button type="submit" className="add-btn">Add book</button>
+          <div className="new-book__control">
+            <input type="text" placeholder="Category" value={enteredCategory} onChange={(event) => setCategory(event.target.value)} />
+          </div>
+
+          <div>
+            <button type="submit" className="add-btn">ADD BOOK</button>
+          </div>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
+
   );
 };
 
