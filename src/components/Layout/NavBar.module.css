@@ -15,13 +15,13 @@
 .logo {
   font-size: 30px;
   font-weight: bold;
-  color: #0290ff;
+  color: var(--azure);
+  width: 35%;
 }
 
 .nav ul {
   list-style: none;
   display: flex;
-  margin: 0 5rem;
   padding: 0;
 }
 
@@ -35,12 +35,23 @@
 
 .nav a {
   text-decoration: none;
-  color: #121212;
+  color: var(--black-two);
 }
 
 .nav a:hover,
 .nav a:active,
 .nav a.active {
-  color: #121212;
+  color: var(--black-two);
   font-weight: bolder;
+}
+
+.profile {
+  font-size: 2rem;
+  color: var(--azure);
+  float: right;
+  cursor: pointer;
+}
+
+.profDiv {
+  width: 100%;
 }

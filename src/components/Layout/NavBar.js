@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { CgProfile } from 'react-icons/cg';
 import classes from './NavBar.module.css';
 
 const NavBar = () => (
@@ -13,8 +14,13 @@ const NavBar = () => (
         <li>
           <NavLink to="/categories" activeClassName={classes.active}>CATEGORIES</NavLink>
         </li>
+
       </ul>
+
     </nav>
+    <div className={classes.profDiv}>
+      <CgProfile className={classes.profile} />
+    </div>
   </header>
 );
 

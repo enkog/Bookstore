@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
 
+:root {
+  --azure: #0290ff;
+  --black-two: #121212;
+  --white: #e8e8e8;
+  --dodger-blue: #379cf6;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -21,4 +28,8 @@ ul {
 
 main {
   padding: 2rem 6rem;
+}
+
+hr {
+  margin: 2.5rem 0;
 }

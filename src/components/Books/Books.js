@@ -22,9 +22,11 @@ const Books = () => {
             item_id={book.item_id}
             category={book.category}
             title={book.title}
+            author={book.author}
           />
         ))}
       </ul>
+      <hr />
       <BookForm />
     </div>
   );
