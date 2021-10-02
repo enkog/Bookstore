@@ -15,8 +15,8 @@
 .logo {
   font-size: 30px;
   font-weight: bold;
-  color: #0290ff;
-  width: 50%
+  color: var(--azure);
+  width: 50%;
 }
 
 .nav ul {
@@ -36,19 +36,19 @@
 
 .nav a {
   text-decoration: none;
-  color: #121212;
+  color: var(--black-two);
 }
 
 .nav a:hover,
 .nav a:active,
 .nav a.active {
-  color: #121212;
+  color: var(--black-two);
   font-weight: bolder;
 }
 
 .profile {
   font-size: 2rem;
-  color: #0290ff;
+  color: var(--azure);
   float: right;
   cursor: pointer;
 }
