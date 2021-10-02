@@ -16,13 +16,12 @@
   font-size: 30px;
   font-weight: bold;
   color: var(--azure);
-  width: 50%;
+  width: 35%;
 }
 
 .nav ul {
   list-style: none;
   display: flex;
-  margin: 0 5rem;
   padding: 0;
 }
 
