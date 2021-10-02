@@ -17,8 +17,8 @@ const BookItem = (props) => {
   };
 
   return (
-    <div>
-      <div className={classes.items}>
+    <div className={classes.container}>
+      <div>
         <div className={classes.desc}>
           <li className={classes.category}>{category}</li>
           <li className={classes.title}>{title}</li>
@@ -27,6 +27,27 @@ const BookItem = (props) => {
           <button type="button">Comments</button>
           <button type="button" className={classes.remove} onClick={deleteBook}>Remove</button>
           <button type="button">Edit</button>
+        </div>
+      </div>
+
+      <div className={classes.progress}>
+        <div className={classes.Oval} />
+        <div className={classes.progresstxt}>
+          <span className={classes.percent}>
+            {Math.floor(Math.random() * 100)}
+            %
+          </span>
+          <span className={classes.status}>Completed</span>
+        </div>
+      </div>
+      <div className={classes.chapUpdate}>
+        <div className={classes.currentChap}>CURRENT CHAPTER</div>
+        <div className={classes.chapter}>
+          Chapter
+          {` ${Math.floor(Math.random() * 30)}`}
+        </div>
+        <div className={classes.updateDiv}>
+          <button type="button" className={classes.update}>UPDATE PROGRESS</button>
         </div>
       </div>
     </div>

@@ -16,6 +16,7 @@
   font-size: 30px;
   font-weight: bold;
   color: #0290ff;
+  width: 50%
 }
 
 .nav ul {
@@ -43,4 +44,15 @@
 .nav a.active {
   color: #121212;
   font-weight: bolder;
+}
+
+.profile {
+  font-size: 2rem;
+  color: #0290ff;
+  float: right;
+  cursor: pointer;
+}
+
+.profDiv {
+  width: 100%;
 }
