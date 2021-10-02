@@ -7,7 +7,7 @@ import classes from './BookItem.module.css';
 const BookItem = (props) => {
   const {
     // eslint-disable-next-line camelcase
-    item_id, category, title,
+    item_id, category, title, author,
   } = props;
 
   const dispatch = useDispatch();
@@ -18,10 +18,11 @@ const BookItem = (props) => {
 
   return (
     <div className={classes.container}>
-      <div>
+      <div className={classes.description}>
         <div className={classes.desc}>
           <li className={classes.category}>{category}</li>
           <li className={classes.title}>{title}</li>
+          <li className={classes.author}>{author}</li>
         </div>
         <div className={classes.rmvDiv}>
           <button type="button">Comments</button>
@@ -58,6 +59,7 @@ BookItem.propTypes = {
   item_id: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
 };
 
 export default BookItem;

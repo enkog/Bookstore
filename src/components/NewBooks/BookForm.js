@@ -8,6 +8,7 @@ const BookForm = () => {
   const dispatch = useDispatch();
 
   const [enteredTitle, setTitle] = useState('');
+  const [enteredAuthor, setAuthor] = useState('');
   const [enteredCategory, setCategory] = useState('');
 
   const submitHandler = (event) => {
@@ -16,12 +17,14 @@ const BookForm = () => {
     const bookData = {
       item_id: uuidv4(),
       title: enteredTitle,
+      author: enteredAuthor,
       category: enteredCategory,
     };
 
     dispatch(addNewBook(bookData));
 
     setTitle('');
+    setAuthor('');
     setCategory('');
   };
 
@@ -33,6 +36,10 @@ const BookForm = () => {
         <div className="new-book__controls">
           <div className="new-book__control">
             <input type="text" placeholder="Book Title" value={enteredTitle} onChange={(event) => setTitle(event.target.value)} />
+          </div>
+
+          <div className="new-book__control">
+            <input type="text" placeholder="Book Author" value={enteredAuthor} onChange={(event) => setAuthor(event.target.value)} />
           </div>
 
           <div className="new-book__control">
