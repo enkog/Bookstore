@@ -36,7 +36,7 @@
 
 .author {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
@@ -46,7 +46,7 @@
 }
 
 .rmvDiv {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .rmvDiv button {
@@ -55,6 +55,7 @@
   color: var(--azure);
   font-size: 0.96rem;
   cursor: pointer;
+  padding: 0;
 }
 
 .rmvDiv .remove {
